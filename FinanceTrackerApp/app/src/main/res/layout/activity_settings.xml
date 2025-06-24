@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/settingsLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/settingsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Settings"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="?attr/colorOnBackground"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingBottom="16dp" />
+
+    <!-- Currency Label -->
+
+    <!-- Currency Spinner -->
+    <TextView
+        android:id="@+id/selectCurrencyLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Select Currency:"
+        android:textColor="?attr/colorOnBackground"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/settingsTitle" />
+
+    <Spinner
+        android:id="@+id/spinnerCurrency"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:backgroundTint="?attr/colorPrimary"
+        app:layout_constraintTop_toBottomOf="@id/selectCurrencyLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Theme Section -->
+    <TextView
+        android:id="@+id/themeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="App Theme"
+        android:textColor="?attr/colorOnBackground"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spinnerCurrency" />
+
+    <!-- Theme Description -->
+    <TextView
+        android:id="@+id/themeDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Choose between light and dark theme"
+        android:textColor="?attr/colorOnBackground"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/themeTitle" />
+
+    <!-- Theme Switch -->
+
+    <!-- Backup Section Title -->
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/themeSwitch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Dark Theme"
+        android:textColor="?attr/colorOnBackground"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/themeDescription"
+        app:thumbTint="?attr/colorPrimary"
+        app:trackTint="?attr/colorPrimaryVariant" />
+
+    <!-- Backup Description -->
+    <TextView
+        android:id="@+id/backupTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="Data Backup &amp; Restore"
+        android:textColor="?attr/colorOnBackground"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/themeSwitch" />
+
+    <TextView
+        android:id="@+id/backupDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Backup and restore your transactions and budget data"
+        android:textColor="?attr/colorOnBackground"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/backupTitle" />
+
+    <!-- Backup Button -->
+    <Button
+        android:id="@+id/backupButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@android:color/holo_orange_light"
+        android:text="Backup Data"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/backupDescription" />
+
+    <!-- Restore Button -->
+    <Button
+        android:id="@+id/restoreButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@android:color/holo_orange_light"
+        android:text="Restore Data"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/backupButton" />
+
+    <!-- Logout Section -->
+
+    <!-- Logout Button -->
+    <TextView
+        android:id="@+id/logoutTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:text="Account"
+        android:textColor="?attr/colorOnBackground"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/restoreButton" />
+
+    <Button
+        android:id="@+id/logoutButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="?attr/colorError"
+        android:text="Logout"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logoutTitle" />
+
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:itemIconTint="@color/nav_selector"
+        app:itemTextColor="@color/nav_selector"
+        app:menu="@menu/bottom_nav_menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
